@@ -1,0 +1,24 @@
+<!-- Container that wraps the partial page-->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container-main" ng-init="main.loadComputers()">
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2 container-sidebar-left">
+  </div>
+
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-10 container-maincontent">
+    <!-- ********* Header portion of the main content***********-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container-subcontent-header">
+    </div>
+
+    <!-- ********* content portion of the main content***********-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container-subcontent-body">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 container-thumb" ng-repeat="product in productData.computers" >
+        <img ng-src="{{product.srcImg}}" class="img-thumbnail">
+        <div class="info-grid">
+          <p style="max-height:55px">{{product.name}}</p></br>
+          <p style="max-height:20px"><strong> Price:{{product.price}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
